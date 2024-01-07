@@ -81,7 +81,7 @@ def help(update: Update, context: CallbackContext):
         context.user_data["lang"] = 'en'
     keyboard_developer = [
         [InlineKeyboardButton(i18n.t('menu.developer', locale=context.user_data["lang"]),
-                              url='https://t.me/fgbernal')]
+                              url='https://t.me/twofaktor')]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard_developer)
 
