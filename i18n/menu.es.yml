@@ -10,11 +10,11 @@ es:
   action_question: ¿Qué quieres hacer?
   action_reply: ¡De acuerdo! Te mostraré ofertas de %{action} de otros usuarios
   exchange_question: ¿Qué exchanges quieres usar?
-  exchange_reply: Muy bien, te enseñaré ordenes de %{exchange}
-  currency_question: ¿En qué te moneda te gustaría pagar o que te pagasen?
+  exchange_reply: Muy bien, te enseñaré órdenes de %{exchange}
+  currency_question: ¿En qué moneda te gustaría pagar o que te pagasen?
   currency_reply: Moneda establecida a %{currency}
-  premium_question: ¿Qué prémium estás dispuesto a aceptar sobre o bajo el precio de mercado?
-  premium_all_reply: Perfecto, te mostraré todos las órdenes, de más a menos ventajosas para ti
+  premium_question: ¿Qué premium estás dispuesto a aceptar sobre o bajo el precio de mercado?
+  premium_all_reply: Perfecto, te mostraré todas las órdenes, de mayor a menor preferencia para ti
   premium_low_reply: Ok, estableceré el precio límite a un %{premium} % por debajo del precio de mercado
   premium_high_reply: Ok, estableceré el precio límite a un %{premium} % por encima del precio de mercado
   format_question: ¿En qué formato te gustaría obtener la respuesta? (imagen es el recomendado para dispositivos iOS)
@@ -27,5 +27,5 @@ es:
   command_available: "Comandos disponibles:"
   command_start: El bot te hará algunas preguntas para configurar correctamente la búsqueda
   command_query: Ejecutar la búsqueda
-  command_help: Moestrar esta ayuda
+  command_help: Mostrar esta ayuda
   command_lang: Cambiar idioma
