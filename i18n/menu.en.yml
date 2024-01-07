@@ -6,7 +6,7 @@ en:
   plain_text: Plain text
   image: Image
   developer: Message the developer
-  intro: "Welcome to noKYCbot. I will help you find buy and sell orders from Bisq, HodlHodl and Robosats. Please configure the following options:"
+  intro: "Welcome to noKYCbot. I will help you find buy and sell orders from decentralized P2P exchanges Bisq and Robosats. Please configure the following options:"
   action_question: What do you want to do?
   action_reply: Got it!, I will show you %{action} offers from other users
   exchange_question: Which exchange(s) do you want to use?
