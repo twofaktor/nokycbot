@@ -73,7 +73,7 @@ def print_orders(fiat, direction, limit, exchanges):
                     table.add_row(row)
         # TODO: split the message in chunks so it won't exceed the max 4096 characters / msg
         if len(table.get_string()) > 3800:
-            logger.info("limite de caracteres alcanzado")
+            logger.info("character limit reached")
             break
     logging.info("Done!")
     return(price_exch, table)
