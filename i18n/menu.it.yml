@@ -3,7 +3,7 @@ it:
   sell: Voglio vendere Bitcoin
   show_all: Mostrare tutti
   start_search: ¡Iniziare la ricerca!
-  plain_text: Testo normale
+  plain_text: Testo
   image: Immagine
   developer: Contatta lo sviluppatore
   intro: "Benvenuto a noKYCbot. Ti aiuterò a trovare ordini di acquisto e vendita sugli exchange decentralizzati P2P Bisq e Robotsats. Imposta i seguenti parametri di ricerca:"

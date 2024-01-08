@@ -3,7 +3,7 @@ zh:
   sell: 我想卖出比特币
   show_all: 显示所有交易所
   start_search: 开始搜索!
-  plain_text: 纯文本
+  plain_text: 文本
   image: 图片
   developer: 联系开发者
   intro: "欢迎来到 noKYCbot。 我将帮助您在 P2P 去中心化交易所 Bisq 和 Robosats 上找到买卖订单。 请设置以下搜索参数:"

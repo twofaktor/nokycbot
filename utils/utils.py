@@ -94,7 +94,7 @@ def table_to_img(table):
     d = ImageDraw.Draw(img)
     d.text((10, 10), table, font=fnt, fill=(255, 0, 0))
     text_width, text_height = d.textsize(table, font=fnt)
-    # draw the actal image
+    # draw the actual image
     img = Image.new('RGB', (text_width+20, text_height+20), (255, 255, 255))
     d = ImageDraw.Draw(img)
     d.text(xy=(10, 10), text=table, font=fnt, fill=(0, 0, 0))

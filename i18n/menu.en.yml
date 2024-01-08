@@ -3,7 +3,7 @@ en:
   sell: I want to sell Bitcoin
   show_all: Show all
   start_search: Start the search!
-  plain_text: Plain text
+  plain_text: Text
   image: Image
   developer: Message the developer
   intro: "Welcome to noKYCbot. I will help you find buy and sell orders from decentralized P2P exchanges Bisq and Robosats. Please configure the following options:"
