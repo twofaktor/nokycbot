@@ -23,7 +23,7 @@ it:
   searching: Raccolta offerte. Ti prego resta in attesa (l'operazione potrebbe richiedere qualche minuto)
   not_recognized: Scusa, non riesco a capire cosa hai detto , %{message}
   language_select: Scegli la lingua desiderata
-  language_reply: Ok, lingua scelta
+  language_reply: Ok, la lingua è cambiata. Scrivi /start da capo
   command_available: "Comandi disponibili"
   command_start: Il bot ti farà alcune domande per impostare appropriatamente la ricerca
   command_query: Eseguire la ricerca

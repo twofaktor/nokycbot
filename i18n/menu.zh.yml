@@ -23,7 +23,7 @@ zh:
   searching: 收集报价。可能还要等一下...
   not_recognized: 对不起，我听不懂你说什么，%{message}
   language_select: 选择需要的语言
-  language_reply: 好的，已选择语言
+  language_reply: 坎比亚多的语言, 书写 /start 新的
   command_available: "可用命令:"
   command_start: 机器人会问你几个问题来根据你的需要过滤订单
   command_query: 开始搜索

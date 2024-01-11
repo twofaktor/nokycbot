@@ -23,7 +23,7 @@ en:
   searching: Gathering offers. Please wait (this may take a while)...
   not_recognized: Sorry I can't recognize what you said, %{message}
   language_select: Select language
-  language_reply: Ok, language selected
+  language_reply: Ok, the language has been changed. Write /start again
   command_available: "Available Commands:"
   command_start: Bot will ask you a few questions to filter the orders according to your needs
   command_query: Execute the query
