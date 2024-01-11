@@ -6,7 +6,7 @@ es:
   plain_text: Texto
   image: Imagen
   developer: Contactar con el desarrollador
-  intro: "Bienvenido a noKYCbot. Te ayudaré a encontrar órdenes de compra y venta en los exchanges P2P descentralizados Bisq y Robosats. Por favor, configura los siguientes parámetros de búsqueda:"
+  intro: "Bienvenido a noKYCbot. Te ayudaré a encontrar órdenes de compra y venta en los exchanges P2P descentralizados Bisq y Robosats. Por favor, configura los siguientes parámetros de búsqueda ⬇️"
   action_question: ¿Qué quieres hacer?
   action_reply: ¡De acuerdo! Te mostraré ofertas de %{action} de otros usuarios
   exchange_question: ¿Qué exchanges quieres usar?
@@ -26,6 +26,6 @@ es:
   language_reply: Ok, idioma ha sido cambiado. Escribe /start de nuevo
   command_available: "Comandos disponibles:"
   command_start: El bot te hará algunas preguntas para configurar correctamente la búsqueda
-  command_query: Ejecutar la búsqueda
+  command_query: Ejecutar la última búsqueda configurada
   command_help: Mostrar esta ayuda
   command_lang: Cambiar idioma
