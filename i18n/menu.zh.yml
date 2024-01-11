@@ -6,7 +6,7 @@ zh:
   plain_text: 文本
   image: 图片
   developer: 联系开发者
-  intro: "欢迎来到 noKYCbot。 我将帮助您在 P2P 去中心化交易所 Bisq 和 Robosats 上找到买卖订单。 请设置以下搜索参数 ⬇️"
+  intro: "欢迎来到 noKYCbot。 我将帮助您在 P2P 去中心化交易所 Bisq 和 Robosats 輸入 /help 查看可用指令。 上找到买卖订单。 请设置以下搜索参数 ⬇️"
   action_question: 你想做什么?
   action_reply: OK! 我将向你展示其他用户的%{action}提议
   exchange_question:  你想使用哪些交易所?

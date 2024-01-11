@@ -6,7 +6,7 @@ en:
   plain_text: Text
   image: Image
   developer: Message the developer
-  intro: "Welcome to noKYCbot. I will help you find buy and sell orders from decentralized P2P exchanges Bisq and Robosats. Please configure the following options ⬇️"
+  intro: "Welcome to noKYCbot. I will help you find buy and sell orders from decentralized P2P exchanges Bisq and Robosats. Type /help to see the available commands. Please configure the following options ⬇️"
   action_question: What do you want to do?
   action_reply: Got it!, I will show you %{action} offers from other users
   exchange_question: Which exchange(s) do you want to use?
@@ -24,7 +24,7 @@ en:
   not_recognized: Sorry I can't recognize what you said, %{message}
   language_select: Select language
   language_reply: Ok, the language has been changed. Write /start again
-  command_available: "Available Commands:"
+  command_available: "Available commands:"
   command_start: Bot will ask you a few questions to filter the orders according to your needs
   command_query: Execute the latest query configured
   command_help: Show this help
