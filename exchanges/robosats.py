@@ -19,7 +19,7 @@ currencies = {"1":"USD", "2":"EUR", "3":"JPY", "4":"GBP", "5":"AUD", "6":"CAD", 
 class Robosats:
     def getOffers(fiat, direction, session):
 
-        robosatsTor = 'http://robodexarjwtfryec556cjdz3dfa7u47saek6lkftnkgshvgg2kcumqd.onion'
+        robosatsTor = 'http://robosats6tkf3eva7x2voqso3a5wcorsnw34jveyxfqi2fu7oyheasid.onion'
 
         key_list = list(currencies.keys())
         val_list = list(currencies.values())
