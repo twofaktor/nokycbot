@@ -18,12 +18,12 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def get_tor_session():
-    logging.info("starting tor session")
-    session = requests.session()
-    session.proxies = {'http':  'socks5h://127.0.0.1:' + config.TOR_PORT,
-                       'https': 'socks5h://127.0.0.1:' + config.TOR_PORT}
-    return session
+#def get_tor_session():
+#    logging.info("starting tor session")
+#    session = requests.session()
+#    session.proxies = {'http':  'socks5h://127.0.0.1:' + config.TOR_PORT,
+#                       'https': 'socks5h://127.0.0.1:' + config.TOR_PORT}
+#    return session
 
 
 def print_orders(fiat, direction, limit, exchanges):

@@ -19,7 +19,7 @@ class Bisq:
         # refprice = int
         # tor = 1 or 0
 
-        bisqBaseUrlTor = 'http://bisqmktse2cabavbr2xjq7xw3h6g5ottemo5rolfcwt6aly6tp5fdryd.onion'
+        bisqBaseUrlTor = 'https://bisq.markets'
 
         bisqApi = f"{bisqBaseUrlTor}/api/offers?market=btc_{fiat.upper()}&direction={direction.upper()}"
         try:
@@ -59,7 +59,7 @@ class Bisq:
         return alloffers
 
     def getFiatPrice(fiat, session):
-        bisqApi = 'http://emzypricpidesmyqg2hc6dkwitqzaxrqnpkdg3ae2wef5znncu2ambqd.onion/getAllMarketPrices'
+        bisqApi = 'https://mempool.space/api/v1/prices'
         try:
             f = session.get(bisqApi)
         except requests.exceptions.Timeout as e:
