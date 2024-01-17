@@ -11,10 +11,10 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class Bisq:
-    
+
     def getOffers(fiat, direction, refprice, session):
 
-        # fiat = eur, usd, 
+        # fiat = eur, usd,
         # direction = buy or sell
         # refprice = int
         # tor = 1 or 0
@@ -41,7 +41,7 @@ class Bisq:
             logger.error("Error decoding orders from Bisq: %s - %s" % (e.errno, e.strerror))
             return []
         key = f"btc_{fiat}"
-        
+
         alloffers = []
 
         for line in values[key][direction + 's' ]:
@@ -57,9 +57,9 @@ class Bisq:
             alloffers.append(offer)
         alloffers.sort(key=lambda item: item.get('price'))
         return alloffers
-    
+
     def getFiatPrice(fiat, session):
-        bisqApi = 'http://wizpriceje6q5tdrxkyiazsgu7irquiqjy2dptezqhrtu7l2qelqktid.onion/getAllMarketPrices'
+        bisqApi = 'http://emzypricpidesmyqg2hc6dkwitqzaxrqnpkdg3ae2wef5znncu2ambqd.onion/getAllMarketPrices'
         try:
             f = session.get(bisqApi)
         except requests.exceptions.Timeout as e:
@@ -71,10 +71,10 @@ class Bisq:
             return 1
         except requests.exceptions.RequestException as e:
             logger.error("Error obtaining price from Bisq: %s - %s" % (e.errno, e.strerror))
-            return 1 
-            # * I return 1 instead of 0 to avoid errors raised dividing by the price    
-        
-        try:    
+            return 1
+            # * I return 1 instead of 0 to avoid errors raised dividing by the price
+
+        try:
             priceapi = f.json()
             f.close()
         except json.decoder.JSONDecodeError as e:
