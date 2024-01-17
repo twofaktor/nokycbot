@@ -18,12 +18,12 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-#def get_tor_session():
-#    logging.info("starting tor session")
-#    session = requests.session()
-#    session.proxies = {'http':  'socks5h://127.0.0.1:' + config.TOR_PORT,
-#                       'https': 'socks5h://127.0.0.1:' + config.TOR_PORT}
-#    return session
+def get_tor_session():
+    logging.info("Starting tor session")
+    session = requests.session()
+    session.proxies = {'http':  'socks5h://127.0.0.1:' + config.TOR_PORT,
+                       'https': 'socks5h://127.0.0.1:' + config.TOR_PORT}
+    return session
 
 
 def print_orders(fiat, direction, limit, exchanges):
@@ -36,7 +36,7 @@ def print_orders(fiat, direction, limit, exchanges):
         exchanges (list): exchanges to query
     """
     logging.info('Exchanges: ' + exchanges)
-   # session = get_tor_session()
+    session = get_tor_session()
     price_exch = Bisq.getFiatPrice(fiat, session)
     if exchanges == "all":
         logging.info("Obtaining orders from bisq...")
