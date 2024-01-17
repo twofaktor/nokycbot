@@ -36,7 +36,7 @@ def print_orders(fiat, direction, limit, exchanges):
         exchanges (list): exchanges to query
     """
     logging.info('Exchanges: ' + exchanges)
-    session = get_tor_session()
+   # session = get_tor_session()
     price_exch = Bisq.getFiatPrice(fiat, session)
     if exchanges == "all":
         logging.info("Obtaining orders from bisq...")
