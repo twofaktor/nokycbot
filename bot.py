@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """This is a telegram bot to get offers from p2p exchanges like
-    bisq and robosats"""
+    bisq, hodlhodl and robosats"""
 
 import logging
 import i18n
@@ -160,7 +160,8 @@ def button(update: Update, context: CallbackContext):
         query.edit_message_text(text=i18n.t(
             'menu.action_reply', action=context.user_data["action"], locale=context.user_data["lang"]))
         exchange_url(update, context)
-    elif query.data in ['bisq', 'robosats', 'all']:
+    #elif query.data in ['bisq', 'robosats', 'all']:
+    elif query.data in ['bisq', 'hodlhodl', 'robosats', 'all']:
         context.user_data["exchange"] = query.data
         query.answer()
         query.edit_message_text(i18n.t(
@@ -203,6 +204,7 @@ def exchange_url(update: Update, context: CallbackContext):
     keyboard_exchanges = [
         [
             InlineKeyboardButton("Bisq", callback_data='bisq'),
+            InlineKeyboardButton("HodlHodl", callback_data='hodlhodl'),
             InlineKeyboardButton("Robosats", callback_data='robosats'),
             InlineKeyboardButton("All", callback_data='all')
         ]

@@ -6,7 +6,7 @@ it:
   plain_text: Testo
   image: Immagine
   developer: Contatta lo sviluppatore
-  intro: "Benvenuto a noKYCbot. Ti aiuterò a trovare ordini di acquisto e vendita sugli exchange decentralizzati P2P Bisq e Robotsats. Digita /help per vedere i comandi disponibili. Imposta i seguenti parametri di ricerca ⬇️"
+  intro: "Benvenuto su noKYCbot. Ti aiuterò a trovare ordini di acquisto e vendita da alcuni dei più popolari scambi decentralizzati P2P. Digita /help per vedere i comandi disponibili. Imposta i seguenti parametri di ricerca ⬇️"
   action_question: Cosa vuoi fare?
   action_reply: Ottimo! Ti mostrerò le offerte della % {action} di altri utenti
   exchange_question: ¿Quale exchange vuoi usare?
