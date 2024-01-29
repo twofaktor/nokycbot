@@ -5,6 +5,7 @@ import io
 # Exchange APIs
 from exchanges.bisq import Bisq
 from exchanges.robosats import Robosats
+from exchanges.hodlhodl import HodlHodl
 
 import config as config
 
