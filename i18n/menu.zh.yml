@@ -17,7 +17,7 @@ zh:
   premium_all_reply: 很好，我给你看所有的订单，从最有利的到最不利的
   premium_low_reply: 好的，我将把限价设定为低于市场价格%{premium} %
   premium_high_reply: 好的，我将限价设置为比市场价格高%{premium} %
-  format_question: 你希望以哪种格式获得回应（建议iOS设备使用图片）
+  format_question: 你希望以哪种格式获得回应（建議圖片）
   format_reply: 好的，我把结果显示为%{format}
   run_query: 现在你可以运行搜索
   searching: 收集报价。可能还要等一下...

@@ -17,7 +17,7 @@ it:
   premium_all_reply: Perfetto, ti mostrerò tutti gli ordini, ordinati da quello per te più vantaggioso a quello meno
   premium_low_reply: Ok, imposterò il prezzo limite a un %{premium} % inferiore al prezzo di mercato
   premium_high_reply: Ok, imposteró il prezzo limite a un %{premium} % sopra il prezzo di mercato
-  format_question: In che forma ti piacerebbe ottenere la risposta? (immagine é il piu raccomandabile per dispositivi iOS)
+  format_question: In che forma ti piacerebbe ottenere la risposta? (immagine é il piu raccomandabile)
   format_reply: Ok, mostraró il risultato come %{format}
   run_query: Adesso puoi eseguire la ricerca
   searching: Raccolta offerte. Ti prego resta in attesa (l'operazione potrebbe richiedere qualche minuto)

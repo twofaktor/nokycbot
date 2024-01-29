@@ -17,7 +17,7 @@ en:
   premium_all_reply: All right, I will show you all orders, regardless of price
   premium_low_reply: Ok, I will set the price limit at %{premium} % below the market price
   premium_high_reply: Ok, I will set the price limit at %{premium} % above the market price
-  format_question: In which format do you want the result to be displayed? (image is recommended for iOS devices)
+  format_question: In which format do you want the result to be displayed? (image is recommended)
   format_reply: Ok, I will display the result as %{format}
   run_query: Now you can run the query
   searching: Gathering offers. Please wait (this may take a while)...

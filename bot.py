@@ -160,7 +160,9 @@ def button(update: Update, context: CallbackContext):
         query.edit_message_text(text=i18n.t(
             'menu.action_reply', action=context.user_data["action"], locale=context.user_data["lang"]))
         exchange_url(update, context)
-    elif query.data in ['bisq', 'robosats', 'all']:
+    elif query.data in ['bisq', 'all']:
+    # Discard Robosats
+    #elif query.data in ['bisq', 'robosats', 'all']:
     # Discard hodlhodl
     #elif query.data in ['bisq', 'hodlhodl', 'robosats', 'all']:
         context.user_data["exchange"] = query.data
@@ -207,7 +209,8 @@ def exchange_url(update: Update, context: CallbackContext):
             InlineKeyboardButton("Bisq", callback_data='bisq'),
             # Discard hodlhodl
             #InlineKeyboardButton("HodlHodl", callback_data='hodlhodl'),
-            InlineKeyboardButton("Robosats", callback_data='robosats'),
+            # Discard RoboSats
+            #InlineKeyboardButton("Robosats", callback_data='robosats'),
             InlineKeyboardButton("All", callback_data='all')
         ]
     ]
