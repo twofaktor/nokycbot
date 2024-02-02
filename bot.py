@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """This is a telegram bot to get offers from p2p exchanges like
-    bisq, hodlhodl and robosats"""
+    bisq and robosats"""
 
 import logging
 import i18n
@@ -68,7 +68,8 @@ def language(update: Update, context: CallbackContext):
                 EMOJI_ES + ' ' + "Español", callback_data='es'),
             InlineKeyboardButton(
                 EMOJI_IT + ' ' + "Italiano", callback_data='it'),
-            InlineKeyboardButton(EMOJI_ZH + ' ' + "中文", callback_data='zh'),
+            InlineKeyboardButton(
+                EMOJI_ZH + ' ' + "中文", callback_data='zh'),
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard_lang)
@@ -160,11 +161,7 @@ def button(update: Update, context: CallbackContext):
         query.edit_message_text(text=i18n.t(
             'menu.action_reply', action=context.user_data["action"], locale=context.user_data["lang"]))
         exchange_url(update, context)
-    elif query.data in ['bisq', 'all']:
-    # Discard Robosats
-    #elif query.data in ['bisq', 'robosats', 'all']:
-    # Discard hodlhodl
-    #elif query.data in ['bisq', 'hodlhodl', 'robosats', 'all']:
+    elif query.data in ['bisq', 'robosats', 'all']:
         context.user_data["exchange"] = query.data
         query.answer()
         query.edit_message_text(i18n.t(
@@ -207,10 +204,7 @@ def exchange_url(update: Update, context: CallbackContext):
     keyboard_exchanges = [
         [
             InlineKeyboardButton("Bisq", callback_data='bisq'),
-            # Discard hodlhodl
-            #InlineKeyboardButton("HodlHodl", callback_data='hodlhodl'),
-            # Discard RoboSats
-            #InlineKeyboardButton("Robosats", callback_data='robosats'),
+            InlineKeyboardButton("Robosats", callback_data='robosats'),
             InlineKeyboardButton("All", callback_data='all')
         ]
     ]

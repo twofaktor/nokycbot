@@ -4,10 +4,7 @@ import io
 
 # Exchange APIs
 from exchanges.bisq import Bisq
-# Discard RoboSats
-#from exchanges.robosats import Robosats
-# Discard hodlhodl
-#from exchanges.hodlhodl import HodlHodl
+from exchanges.robosats import Robosats
 
 import config as config
 
@@ -30,7 +27,7 @@ def get_tor_session():
 
 
 def print_orders(fiat, direction, limit, exchanges):
-    """Get orders from bisq, hodlhodl and robosats according to parameters
+    """Get orders from bisq and robosats according to parameters
 
     Args:
         fiat (string): usd, eur, ...
@@ -44,30 +41,17 @@ def print_orders(fiat, direction, limit, exchanges):
     if exchanges == "all":
         logging.info("Obtaining orders from bisq...")
         bisqOffers = Bisq.getOffers(fiat, direction, price_exch, session)
-    # Discard RoboSats
-    #   logging.info("Obtaining orders from robosats...")
-    #   robosatsOffers = Robosats.getOffers(fiat, direction, session)
-    # Discard hodlhodl
-    #   logging.info("Obtaining orders from hodlhodl...")
-    #   hodlhodlOffers = HodlHodl.getOffers(fiat, direction, price_exch, session)
-    #   allOffers = bisqOffers + robosatsOffers + hodlhodlOffers
-    # Discard RoboSats
-    #   allOffers = bisqOffers + robosatsOffers
-        allOffers = bisqOffers
+        logging.info("Obtaining orders from robosats...")
+        robosatsOffers = Robosats.getOffers(fiat, direction, session)
+        allOffers = bisqOffers + robosatsOffers
     elif exchanges == "bisq":
         logging.info("Obtaining orders from bisq...")
         bisqOffers = Bisq.getOffers(fiat, direction, price_exch, session)
         allOffers = bisqOffers
-    # Discard hodlhodl
-    #elif exchanges == "hodlhodl":
-    #    logging.info("Obtaining orders from hodlhodl...")
-    #    hodlhodlOffers = HodlHodl.getOffers(fiat, direction, price_exch, session)
-    #    allOffers = hodlhodlOffers
-    # Discard RoboSats
-    #elif exchanges == "robosats":
-    #    logging.info("Obtaining orders from robosats...")
-    #    robosatsOffers = Robosats.getOffers(fiat, direction, session)
-    #    allOffers = robosatsOffers
+    elif exchanges == "robosats":
+        logging.info("Obtaining orders from robosats...")
+        robosatsOffers = Robosats.getOffers(fiat, direction, session)
+        allOffers = robosatsOffers
     if direction == "buy":
         allOffers.sort(key=lambda item: item.get('price'), reverse=True)
     elif direction == "sell":
