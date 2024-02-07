@@ -5,6 +5,7 @@ import io
 # Exchange APIs
 from exchanges.bisq import Bisq
 from exchanges.robosats import Robosats
+from exchanges.hodlhodl import HodlHodl
 
 import config as config
 
@@ -27,7 +28,7 @@ def get_tor_session():
 
 
 def print_orders(fiat, direction, limit, exchanges):
-    """Get orders from bisq and robosats according to parameters
+    """Get orders from bisq, hodlhodl and robosats according to parameters
 
     Args:
         fiat (string): usd, eur, ...
@@ -41,13 +42,19 @@ def print_orders(fiat, direction, limit, exchanges):
     if exchanges == "all":
         logging.info("Obtaining orders from bisq...")
         bisqOffers = Bisq.getOffers(fiat, direction, price_exch, session)
+        logging.info("Obtaining orders from hodlhodl...")
+        hodlhodlOffers = HodlHodl.getOffers(fiat, direction, price_exch, session)
         logging.info("Obtaining orders from robosats...")
         robosatsOffers = Robosats.getOffers(fiat, direction, session)
-        allOffers = bisqOffers + robosatsOffers
+        allOffers = bisqOffers + robosatsOffers + hodlhodlOffers
     elif exchanges == "bisq":
         logging.info("Obtaining orders from bisq...")
         bisqOffers = Bisq.getOffers(fiat, direction, price_exch, session)
         allOffers = bisqOffers
+    elif exchanges == "hodlhodl":
+        logging.info("Obtaining orders from hodlhodl...")
+        hodlhodlOffers = HodlHodl.getOffers(fiat, direction, price_exch, session)
+        allOffers = hodlhodlOffers
     elif exchanges == "robosats":
         logging.info("Obtaining orders from robosats...")
         robosatsOffers = Robosats.getOffers(fiat, direction, session)
