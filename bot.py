@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""This is a telegram bot to get offers from p2p exchanges like
-    bisq and robosats"""
+"""This is a telegram bot to get offers from the most popular P2P decentralized exchanges"""
 
 import logging
 import i18n
