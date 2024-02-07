@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""This is a telegram bot to get offers from the most popular p2p exchanges"""
+"""This is a telegram bot to get offers from p2p exchanges like
+    bisq"""
 
 import logging
 import i18n
