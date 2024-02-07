@@ -4,7 +4,6 @@ import io
 
 # Exchange APIs
 from exchanges.bisq import Bisq
-from exchanges.robosats import Robosats
 
 import config as config
 
@@ -27,7 +26,7 @@ def get_tor_session():
 
 
 def print_orders(fiat, direction, limit, exchanges):
-    """Get orders from bisq and robosats according to parameters
+    """Get orders from the most popular p2p exchanges according to parameters
 
     Args:
         fiat (string): usd, eur, ...
@@ -41,17 +40,11 @@ def print_orders(fiat, direction, limit, exchanges):
     if exchanges == "all":
         logging.info("Obtaining orders from bisq...")
         bisqOffers = Bisq.getOffers(fiat, direction, price_exch, session)
-        logging.info("Obtaining orders from robosats...")
-        robosatsOffers = Robosats.getOffers(fiat, direction, session)
-        allOffers = bisqOffers + robosatsOffers
+        allOffers = bisqOffers
     elif exchanges == "bisq":
         logging.info("Obtaining orders from bisq...")
         bisqOffers = Bisq.getOffers(fiat, direction, price_exch, session)
         allOffers = bisqOffers
-    elif exchanges == "robosats":
-        logging.info("Obtaining orders from robosats...")
-        robosatsOffers = Robosats.getOffers(fiat, direction, session)
-        allOffers = robosatsOffers
     if direction == "buy":
         allOffers.sort(key=lambda item: item.get('price'), reverse=True)
     elif direction == "sell":
