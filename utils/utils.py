@@ -26,7 +26,7 @@ def get_tor_session():
 
 
 def print_orders(fiat, direction, limit, exchanges):
-    """Get orders from bisq according to parameters
+    """Get orders from the most popular P2P decentralized exchanges according to parameters
 
     Args:
         fiat (string): usd, eur, ...
