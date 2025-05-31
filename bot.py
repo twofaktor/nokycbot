@@ -102,7 +102,7 @@ def run_query(update: Update, context: CallbackContext):
     if "exchange" in context.user_data.keys():
         exchange = context.user_data["exchange"]
     else:
-        exchange = "all"
+        exchange = "all"  # Default remains, though 'all' option commented out in UI
 
     if "action" in context.user_data.keys():
         action = context.user_data["action"]
@@ -160,7 +160,10 @@ def button(update: Update, context: CallbackContext):
         query.edit_message_text(text=i18n.t(
             'menu.action_reply', action=context.user_data["action"], locale=context.user_data["lang"]))
         exchange_url(update, context)
-    elif query.data in ['bisq', 'robosats', 'all']:
+    elif query.data in ['bisq', 'robosats'  #, 'all'
+                       ]:
+        # context.user_data["exchange"] = query.data
+        # 'all' option commented out
         context.user_data["exchange"] = query.data
         query.answer()
         query.edit_message_text(i18n.t(
@@ -204,7 +207,7 @@ def exchange_url(update: Update, context: CallbackContext):
         [
             InlineKeyboardButton("Bisq", callback_data='bisq'),
             InlineKeyboardButton("Robosats", callback_data='robosats'),
-            InlineKeyboardButton("All", callback_data='all')
+            # InlineKeyboardButton("All", callback_data='all')  # Commented out 'All' option
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard_exchanges)
