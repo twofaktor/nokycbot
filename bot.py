@@ -163,6 +163,8 @@ def button(update: Update, context: CallbackContext):
     
     elif query.data in ['robosats']:
 
+    #elif query.data in ['bisq', 'robosats']:
+
     #elif query.data in ['bisq', 'robosats', 'all'
     #                   ]:
     
