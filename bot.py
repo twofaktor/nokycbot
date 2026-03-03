@@ -163,10 +163,10 @@ def button(update: Update, context: CallbackContext):
     
     elif query.data in ['robosats']:
 
-    #elif query.data in ['bisq', 'robosats']:
+    elif query.data in ['bisq', 'robosats']:
 
-    #elif query.data in ['bisq', 'robosats', 'all'
-    #                   ]:
+    elif query.data in ['bisq', 'robosats', 'all'
+                       ]:
     
         context.user_data["exchange"] = query.data
         query.answer()
@@ -209,9 +209,9 @@ def button(update: Update, context: CallbackContext):
 def exchange_url(update: Update, context: CallbackContext):
     keyboard_exchanges = [
         [
-            # InlineKeyboardButton("Bisq", callback_data='bisq'),
+            InlineKeyboardButton("Bisq", callback_data='bisq'),
             InlineKeyboardButton("Robosats", callback_data='robosats'),
-            # InlineKeyboardButton("All", callback_data='all')  # Commented out 'All' option
+            InlineKeyboardButton("All", callback_data='all')
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard_exchanges)
