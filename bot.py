@@ -102,7 +102,7 @@ def run_query(update: Update, context: CallbackContext):
     if "exchange" in context.user_data.keys():
         exchange = context.user_data["exchange"]
     else:
-        exchange = "all"  # Default remains, though 'all' option commented out in UI
+        exchange = "all"
 
     if "action" in context.user_data.keys():
         action = context.user_data["action"]
@@ -161,9 +161,9 @@ def button(update: Update, context: CallbackContext):
             'menu.action_reply', action=context.user_data["action"], locale=context.user_data["lang"]))
         exchange_url(update, context)
     
-    elif query.data in ['robosats']:
+    #elif query.data in ['robosats']:
 
-    elif query.data in ['bisq', 'robosats']:
+    #elif query.data in ['bisq', 'robosats']:
 
     elif query.data in ['bisq', 'robosats', 'all'
                        ]:
