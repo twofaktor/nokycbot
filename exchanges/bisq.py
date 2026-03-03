@@ -59,7 +59,7 @@ class Bisq:
         return alloffers
 
     def getFiatPrice(fiat, session):
-        bisqApi = 'http://runbtcxzz4v2haszypwbrn2baqdo7tlwt6dw7g27cwwaootd4gktwayd.onion/getAllMarketPrices'
+        bisqApi = 'http://runbtcpn7gmbj5rgqeyfyvepqokrijem6rbw7o5wgqbguimuoxrmcdyd.onion/getAllMarketPrices'
         try:
             f = session.get(bisqApi)
         except requests.exceptions.Timeout as e:
