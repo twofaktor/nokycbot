@@ -30,9 +30,6 @@ class Robosats:
             'http://alice7bqexhtnkiqhtgkuwgtzzfkishw23ac4sfwpznrwlmnipxlomyd.onion',
             'http://4t4jxmivv6uqej6xzx2jx3fxh75gtt65v3szjoqmc4ugdlhipzdat6yd.onion',
             'http://otmoonrndnrddqdlhu6b36heunmbyw3cgvadqo2oqeau3656wfv7fwad.onion',
-            'http://librebazovfmmkyi2jekraxsuso3mh622avuuzqpejixdl5dhuhb4tid.onion',
-            'http://ammannjgzybw4qm2odmci7xgolh5grzijidacjxose5tthm375dcopad.onion',
-            'http://dqmmejfmtlve7d4ccohk4usriifdtci6xk4wv7igxn2fyaduh25s6did.onion',
             'http://ammannjgzybw4qm2odmci7xgolh5grzijidacjxose5tthm375dcopad.onion'
         ]
 
